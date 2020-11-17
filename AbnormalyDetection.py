@@ -109,10 +109,13 @@ history = model.fit(
 )
 
 plotTrainingResults(history)
+
 x_train_pred = model.predict(x_train)
+compareOriginalAndReconstructedSequences(x_train,x_train_pred)
 threshold =findThreshold(x_train,x_train_pred)
 
-compareOriginalAndReconstructedSequences(x_train,x_train_pred)
+
+
 
 
 
